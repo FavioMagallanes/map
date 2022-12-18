@@ -8,11 +8,12 @@ export type MapAction = {
 
 export const mapReducer = (state: MapState, action: MapAction): MapState => {
   switch (action.type) {
-    // case "setMap":
-    //   return {
-    //     ...state,
-    //     map: action.payload,
-    //   };
+    case "setMap":
+      return {
+        ...state,
+        isMapLoaded: true,
+        map: action.payload,
+      };
     default:
       return state;
   }
